@@ -2,7 +2,7 @@
 coding task for P.Sapient
 
 
-Under React-boiler folder, the server side functionality comes into play for the app.
+Under react-boilerplate-master folder, the server side functionality comes into play for the app.
 
 under the folder raw these files have been created:
 app.js
