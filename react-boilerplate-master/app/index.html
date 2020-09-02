@@ -1,1 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>XT-coding Zorawar Kang</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+</head>
+<style>
+* {
+  box-sizing: border-box
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Dosis', sans-serif;
+  line-height: 1.6;
+  color: #666;
+  background: #F6F6F6;
+}
+
+#filters{
+  float: left;
+  max-width: 10em;
+}
+
+.btn{
+  background-color: #5FC972;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 5px;
+  margin: 0.75em 0.75em 0;
+}
+.btn:active{
+  background-color: #4EA95E;
+}
+.btn:hover{
+  background-color: #5BB96B;
+}
+
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 1.5rem 2.5rem;
+  margin: 0 0 2rem 0;
+  font-size: 1.5rem;
+  color: #001668;
+}
+
+h2 {
+  text-align: center;
+  padding: 1.5rem 2.5rem;
+  background-image: linear-gradient(120deg, #00F0FF 0%, #FF1616 100%);
+  margin: 0 0 2rem 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+}
+
+p {
+  padding: 0 2.5rem 2.5rem;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 1rem;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all .2s linear;
+}
+
+.card:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -2px, 0);
+}
+@media screen and (max-width: 600px){
+  #filters {
+    float: none;
+    max-width: 10em;
+    margin: 0 auto;
+    margin-bottom: 3em;
+}
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+  
+}
+
+@media screen and (min-width: 1025px) {
+  .card {
+    flex: 1 1 calc(25% - 2rem);
+  }
+}
+
+</style>
+<body>
+  <h1>SpaceX Launch Programs</h1>
+  <section class="year-filter">
+    <div id="filters">
+      <div class="year">
+        <h3>Launch Year</h3>
+        <div class="filter-buttons">
+          <button class="btn" onclick="filteryear('2006')"> 2006</button>
+          <button class="btn" onclick="filteryear('2007')"> 2007</button>
+          <button class="btn" onclick="filteryear('2008')"> 2008</button>
+          <button class="btn" onclick="filteryear('2009')"> 2009</button>
+          <button class="btn" onclick="filteryear('2010')"> 2010</button>
+          <button class="btn" onclick="filteryear('2011')"> 2011</button>
+          <button class="btn" onclick="filteryear('2012')"> 2012</button>
+          <button class="btn" onclick="filteryear('2013')"> 2013</button>
+          <button class="btn" onclick="filteryear('2014')"> 2014</button>
+          <button class="btn" onclick="filteryear('2015')"> 2015</button>
+          <button class="btn" onclick="filteryear('2016')"> 2016</button>
+          <button class="btn" onclick="filteryear('2017')"> 2017</button>
+          <button class="btn" onclick="filteryear('2018')"> 2018</button>
+          <button class="btn" onclick="filteryear('2019')"> 2019</button>
+          <button class="btn" onclick="filteryear('2020')"> 2006</button>
+        </div>        
+      </div>
+
+      <div class="slaunch">
+        <h3>Successful Launch</h3>
+        <div class="filter-buttons">
+          <button class="btn" onclick="filterlaunch('true')"> True</button>
+          <button class="btn" onclick="filterlaunch('false')"> False</button>
+        </div>
+      </div>
+      
+      <div class="sland">
+        <h3>Successful Landing</h3>
+        <div class="filter-buttons">
+          <button class="btn" onclick="filterland('true')"> True</button>
+          <button class="btn" onclick="filterland('false')"> False</button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  
+  <section class="flight-data">
+     <div id="root"></div>
+  </section>
+  
+  <section class="developer">
+    <h2>Developed by: Z. Kang</h2>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
